@@ -1,14 +1,14 @@
-
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 90%;
-    padding:3px 3px 3px 3px;
+    padding: 3px 3px 3px 3px;
     margin: 5px 5px 5px 5px;
 }
-th, td {
-    border:1px solid black;
+
+th,
+td {
+    border: 1px solid black;
     text-align: left;
 
 }
@@ -18,20 +18,35 @@ th {
 }
 
 .cards-body {
-    background-color:pink;
+    background-color: pink;
     width: 100%;
     padding: 5px 5px 5px 5px;
-    
+
 }
 
-/**.img {
-    display: flex;
-    flex-direction: row;
-    width: 650px;
-    justify-content: space-around;
+
+
+@media screen and (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    footer {
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+
 }
 
-.carousel-item active {
-    height: 200px;
-}**/
-
+img {
+    width: 100px; 
+    height:100px;
+}
