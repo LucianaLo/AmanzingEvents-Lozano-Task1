@@ -1,3 +1,6 @@
+
+const id = new URLSearchParams(location.search).get("id")
+
 let contenedor1 = document.getElementById('cardd-body');
 let fragment = document.createDocumentFragment()
 
@@ -7,9 +10,9 @@ for(let element of data.events){
     div.style.width="25rem"
     div.innerHTML= `<img src=${element.image} class="
     <div class="cardd-body"
-    <h5 class="card-title">${element.place}</h5>
-        <p> ${element.category}</p>
-        <p> ${element.price}</p>
+    <h6 class="card-title">${element.place}</h6>
+        <p> <b>Capacity</b> ${element.capacity}</p>
+        <p> <b>Assistance:</b> ${element.assistance}</p>
       `
  fragment.appendChild(div)
 

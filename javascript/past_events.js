@@ -1,3 +1,6 @@
+let past_events = data.events.filter(elemento => Date.parse(elemento.date) < Date.parse(data.currentDate))
+console.log(past_events)
+
 let contenedor = document.getElementById('pepe');
 
 function drawCards(arrayCards, container){
@@ -26,12 +29,12 @@ for (let element of arrayCards) {
 container.appendChild(fragment)
 }
 
-drawCards(data.events,contenedor) 
+drawCards(past_events,contenedor) 
 
 
 //--------------------------------------Filtar las Cards
 
-let categorias = data.events.map(object=> object.category)
+let categorias = past_events.map(object=> object.category)
 console.log(categorias)
 
 let categoriasFiltradas = [...new Set(categorias)]
@@ -79,8 +82,8 @@ function verificarSelection(){
 
 function filtrarArrays (arrayStrings, listCards){
   if (arrayStrings.length == 0) return listCards
-  return listCards.filter(event => arrayStrings.includes(event.category))
-  
+  return listCards.filter(event => arrayStrings.includes(event.category.replace(" ","_")))
+
 
 }
 
@@ -95,7 +98,7 @@ let stringSearch = ""
 
     search_input.addEventListener('keyup', () => {
         stringSearch = search_input.value
-        filtrosCruzados(data.events)
+        filtrosCruzados(past_events)
 
     })
 

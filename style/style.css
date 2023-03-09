@@ -68,3 +68,9 @@ img {
     height: 100% !important;
 }
 
+.cardd-body {
+    display: flex;
+    flex-wrap: 6;
+    justify-content: center;
+    gap: 4;
+}

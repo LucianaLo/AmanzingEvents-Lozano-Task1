@@ -1,3 +1,7 @@
+let upcoming_events = data.events.filter(elemento => Date.parse(elemento.date) > Date.parse(data.currentDate))
+console.log(upcoming_events)
+
+
 let contenedor = document.getElementById('pepa');
 
 function drawCards(arrayCards, container){
@@ -26,12 +30,12 @@ for (let element of arrayCards) {
 container.appendChild(fragment)
 }
 
-drawCards(data.events,contenedor) 
+drawCards(upcoming_events,contenedor) 
 
 
 //--------------------------------------Filtar las Cards
 
-let categorias = data.events.map(object=> object.category)
+let categorias = upcoming_events.map(object=> object.category)
 console.log(categorias)
 
 let categoriasFiltradas = [...new Set(categorias)]
@@ -71,15 +75,14 @@ function verificarSelection(){
   inputschequeados = Array.from(checkBoxs).filter(checkbox => checkbox.checked).map(input => input.value)
   console.log(inputschequeados);
 
-  filtrosCruzados(data.events)
-  // let inputValue = inputschequeados.map(input => input.value);
-  // console.log(filtrarArrays(inputValue, data.events));
+  filtrosCruzados(upcoming_events)
+  
 
 }
 
 function filtrarArrays (arrayStrings, listCards){
   if (arrayStrings.length == 0) return listCards
-  return listCards.filter(event => arrayStrings.includes(event.category))
+  return listCards.filter(event => arrayStrings.includes(event.category.replace(" ","_")))
   
 
 }
@@ -95,7 +98,7 @@ let stringSearch = ""
 
     search_input.addEventListener('keyup', () => {
         stringSearch = search_input.value
-        filtrosCruzados(data.events)
+        filtrosCruzados(upcoming_events)
 
     })
 

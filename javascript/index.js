@@ -79,7 +79,7 @@ function verificarSelection(){
 
 function filtrarArrays (arrayStrings, listCards){
   if (arrayStrings.length == 0) return listCards
-  return listCards.filter(event => arrayStrings.includes(event.category))
+  return listCards.filter(event => arrayStrings.includes(event.category.split(" ").join("_")))
   
 
 }
