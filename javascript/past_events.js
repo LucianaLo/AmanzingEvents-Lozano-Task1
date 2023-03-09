@@ -4,8 +4,9 @@ console.log(past_events)
 let contenedor = document.getElementById('pepe');
 
 function drawCards(arrayCards, container){
+  container.innerHTML=""
+  if(arrayCards.length > 0){
 let fragment = document.createDocumentFragment()
-container.innerHTML=""
 for (let element of arrayCards) {
   let div = document.createElement('div')
   div.classList.add("card")
@@ -27,6 +28,11 @@ for (let element of arrayCards) {
 }
 
 container.appendChild(fragment)
+} else {
+  let div = document.createElement('div')
+  div.innerHTML = "<p>No se encontraron resultados</p>"
+  container.appendChild(div)
+}
 }
 
 drawCards(past_events,contenedor) 

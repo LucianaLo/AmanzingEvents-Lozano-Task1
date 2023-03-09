@@ -5,8 +5,9 @@ console.log(upcoming_events)
 let contenedor = document.getElementById('pepa');
 
 function drawCards(arrayCards, container){
+  container.innerHTML=""
+  if(arrayCards.length > 0){
 let fragment = document.createDocumentFragment()
-container.innerHTML=""
 for (let element of arrayCards) {
   let div = document.createElement('div')
   div.classList.add("card")
@@ -28,6 +29,11 @@ for (let element of arrayCards) {
 }
 
 container.appendChild(fragment)
+} else {
+  let div = document.createElement('div')
+  div.innerHTML = "<p>No se encontraron resultados</p>"
+  container.appendChild(div)
+}
 }
 
 drawCards(upcoming_events,contenedor) 
@@ -115,5 +121,6 @@ function filtrosCruzados(listCards) {
   let arrayFilterString = filterString(stringSearch, arrayFilterCheck)
 
   drawCards(arrayFilterString, contenedor)
+
 
 }

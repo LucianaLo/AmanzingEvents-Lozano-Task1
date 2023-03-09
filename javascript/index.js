@@ -1,8 +1,9 @@
 let contenedor = document.getElementById('cartas');
 
 function drawCards(arrayCards, container){
+  container.innerHTML=""
+  if(arrayCards.length > 0){
 let fragment = document.createDocumentFragment()
-container.innerHTML=""
 for (let element of arrayCards) {
   let div = document.createElement('div')
   div.classList.add("card")
@@ -24,6 +25,11 @@ for (let element of arrayCards) {
 }
 
 container.appendChild(fragment)
+} else {
+  let div = document.createElement('div')
+  div.innerHTML = "<p>No se encontraron resultados</p>"
+  container.appendChild(div)
+}
 }
 
 drawCards(data.events,contenedor) 
@@ -72,8 +78,7 @@ function verificarSelection(){
   console.log(inputschequeados);
 
   filtrosCruzados(data.events)
-  // let inputValue = inputschequeados.map(input => input.value);
-  // console.log(filtrarArrays(inputValue, data.events));
+  
 
 }
 
