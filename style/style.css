@@ -24,9 +24,21 @@ th {
 
 }
 
+div>button>a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.btn-outline-info {
+    --bs-btn-hover-bg:#f00de959;
+    --bs-btn-border-color:#f00de959;
+    --bs-btn-hover-border-color:pink;
+}
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 778px) {
 
     main {
         flex-direction: column;
@@ -46,7 +58,13 @@ th {
 
 }
 
-img {
-    width: 100px;
-    height: 100px;
+.logo {
+    width:25% !important;
+    /* height: 25% !important; */
 }
+
+img {
+    width: 100% !important;
+    height: 100% !important;
+}
+

@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Upcoming Events</title>
-  <link rel="icon" type="image/x-icon" href="./imagenes/Logo-Amazing-Events.png">
+  <link rel="icon" type="image/x-icon" href="./assets/imagenes/Logo-Amazing-Events.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
@@ -17,27 +17,26 @@
   <nav class="navbar bg-body-tertiary d-flex flex-row justify-content-around">
     <div class="container">
 
-      <img src="./imagenes/Logo-Amazing-Events.png" alt="logo de la pagina">
+      <img class="logo" src="./assets/imagenes/Logo-Amazing-Events.png" alt="logo de la pagina">
 
 
       <button type="button" class="btn btn-outline-info">
-        <a href="#" class="per  d-flex flex column justify-content-end align-content-end">Home</a>
-        </button>
-        <button type="button" class="btn btn-outline-info">
-        <a href="./upcoming_events.html"
-          class="per  d-flex flex column justify-content-center align-content-center">Upcoming Events</a>
-        </button>
-        <button type="button" class="btn btn-outline-info">
+        <a href="./index.html" class="per  d-flex flex column justify-content-end align-content-end">Home</a>
+      </button>
+      <button type="button" class="btn btn-outline-info">
+        <a href="#" class="per  d-flex flex column justify-content-center align-content-center">Upcoming Events</a>
+      </button>
+      <button type="button" class="btn btn-outline-info">
         <a href="./past_events.html" class="per  d-flex flex column justify-content-center align-content-center">Past
           Events</a>
-        </button>
-        <button type="button" class="btn btn-outline-info">
+      </button>
+      <button type="button" class="btn btn-outline-info">
         <a href="./contact.html" class="per  d-flex flex column justify-content-center align-content-center">Contact</a>
       </button>
       <button type="button" class="btn btn-outline-info">
         <a href="./stast.html" class="per  d-flex flex column justify-content-center align-content-center">Stast</a>
       </button>
-    
+
     </div>
   </nav>
 
@@ -46,41 +45,42 @@
     <div class="card p-3 mb-2 bg-danger-subtle text-emphasis-danger">
       <div class="card-body text-center">
         <h1>Upcoming Events</h1>
-        </div>
       </div>
+    </div>
 
     <div class="card">
       <div class="card-body">
         <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <label for="categoryo">Category</label>
+          <div id ="contenedorCheck" class="container-fluid">
+
+            <!-- <label for="categoryo">Category</label>
             <input type="checkbox" name="category1" id="categoryo">
-  
+
             <label for="categorys">Category</label>
             <input type="checkbox" name="category2" id="categorys">
-  
+
             <label for="categoryt">Category</label>
             <input type="checkbox" name="category3" id="categoryt">
-  
+
             <label for="categoryf">Category</label>
             <input type="checkbox" name="category4" id="categoryf">
-  
+
             <label for="categoryx">Category</label>
-            <input type="checkbox" name="category5" id="categoryx">
-  
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <input type="checkbox" name="category5" id="categoryx">-->
           </div>
+          <form class="d-flex" role="search">
+            <input id="contCheck" class="form-control me-2" type="search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
         </nav>
 
 
-        <div id="cartas" class="card-body d-flex gap-4 flex-wrap justify-content-center">
-          
-          </div>
+        <div id="pepa" class="card-body d-flex gap-4 flex-wrap justify-content-center">
+
         </div>
       </div>
+    </div>
 
     </div>
 
@@ -114,14 +114,14 @@
 
   <!-- Debemos respetar el orden de cascada -->
   <script src="./javascript/data.js"></script>
-  <script src="./javascript/upcoming-events.js"></script>
 
-<!-- scripts -->
+
+  <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 
-    
+  <script src="./javascript/upcoming-events.js"></script>
 
 </body>
 
