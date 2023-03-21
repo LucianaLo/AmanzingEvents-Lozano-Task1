@@ -39,7 +39,6 @@ return evento2
 })
 console.log(menorAttendance)
 
-
 let contenedorTr = document.createElement('tr')
 contenedorTr.innerHTML = 
 `<td colspan="3">${mayorAttendance.name}: ${mayorAttendance.assistance / mayorAttendance.capacity*100}%</td>
@@ -71,7 +70,6 @@ function introducirTabla2 (array,contenedor){
         fragmento.appendChild(trContenedor)
     }
     contenedor.appendChild(fragmento)
-
 }
 
 function calcularAsistencia (array,nombrecategoria){

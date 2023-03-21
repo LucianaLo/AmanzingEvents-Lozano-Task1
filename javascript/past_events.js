@@ -43,9 +43,7 @@ async function traerDatos() {
       filtrosCruzados(datos.events, inputschequeados, stringSearch, contenedor)
 
     })
-
   }
-
   catch (error) {
     console.log(error)
   }
@@ -73,9 +71,7 @@ function drawCards(arrayCards, container) {
 
     </div>`
       fragment.appendChild(div)
-
     }
-
     container.appendChild(fragment)
   } else {
     let div = document.createElement('div')
@@ -95,10 +91,8 @@ function drawChecks(listCards, container) {
      <input type="checkbox" name="category2" id="categorys" value=${element.split(" ").join("_")}>
  `
     fragment.appendChild(div)
-
   }
-
-  contenedorCheck.appendChild(fragment)
+  container.appendChild(fragment)
 }
 
 
@@ -108,7 +102,6 @@ function drawChecks(listCards, container) {
 function filtrarArrays(arrayStrings, listCards) {
   if (arrayStrings.length == 0) return listCards
   return listCards.filter(event => arrayStrings.includes(event.category.split(" ").join("_")))
-
 }
 
 //search
@@ -126,5 +119,4 @@ function filtrosCruzados(listCards, inputschequeados, stringSearch, contenedor) 
   let arrayFilterString = filterString(stringSearch, arrayFilterCheck)
 
   drawCards(arrayFilterString, contenedor)
-
 }

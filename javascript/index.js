@@ -33,18 +33,14 @@ async function traerDatos() {
     }
 
     let stringSearch = ""
-
     const search_input = document.getElementById("contCheck")
     console.log(search_input)
 
     search_input.addEventListener('keyup', () => {
       stringSearch = search_input.value
       filtrosCruzados(datos.events, inputschequeados, stringSearch, contenedor)
-
     })
-
   }
-
   catch (error) {
     console.log(error)
   }
@@ -72,7 +68,6 @@ function drawCards(arrayCards, container) {
 
     </div>`
       fragment.appendChild(div)
-
     }
 
     container.appendChild(fragment)
@@ -83,9 +78,7 @@ function drawCards(arrayCards, container) {
   }
 }
 
-
 //--------------------------------------Filtar las Cards
-
 
 function drawChecks(listCards, container) {
   let fragment = document.createDocumentFragment()
@@ -96,24 +89,18 @@ function drawChecks(listCards, container) {
      <input type="checkbox" name="category2" id="categorys" value=${element.split(" ").join("_")}>
  `
     fragment.appendChild(div)
-
   }
-
-  contenedorCheck.appendChild(fragment)
+  container.appendChild(fragment)
 }
 
 //----------------------------------------------Filtar los Checkboxs
 
-
 function filtrarArrays(arrayStrings, listCards) {
   if (arrayStrings.length == 0) return listCards
   return listCards.filter(event => arrayStrings.includes(event.category.split(" ").join("_")))
-
-
 }
 
 //search
-
 
 function filterString(string, listCards) {
   if (string == "") return listCards
@@ -122,13 +109,11 @@ function filterString(string, listCards) {
 
 //Que anden cruzados en todas, se tienen que renderizar las cards filtradas
 
-
 function filtrosCruzados(listCards, inputschequeados, stringSearch, contenedor) {
   let arrayFilterCheck = filtrarArrays(inputschequeados, listCards)
   let arrayFilterString = filterString(stringSearch, arrayFilterCheck)
 
   drawCards(arrayFilterString, contenedor)
-
 }
 
 
