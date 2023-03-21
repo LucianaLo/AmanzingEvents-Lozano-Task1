@@ -44,7 +44,7 @@ let contenedorTr = document.createElement('tr')
 contenedorTr.innerHTML = 
 `<td colspan="3">${mayorAttendance.name}: ${mayorAttendance.assistance / mayorAttendance.capacity*100}%</td>
  <td colspan="3">${menorAttendance.name}: ${menorAttendance.assistance / menorAttendance.capacity*100}%</td>
- <td colspan="3">${mayorAttendance.name}: ${mayorAttendance.assistance / mayorAttendance.capacity*100}%</td>`
+ <td colspan="3">${mayorCapacidad.name}: ${mayorCapacidad.capacity}</td>`
  contenedor.appendChild(contenedorTr)
 }
 
